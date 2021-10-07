@@ -1,0 +1,14 @@
+io\swagger\Swagger2SpringBoot.class
+com\ifi\demo\user\api\ApiException.class
+io\swagger\Swagger2SpringBoot$ExitException.class
+io\swagger\configuration\HomeController.class
+com\ifi\demo\user\api\UserApi.class
+com\ifi\demo\user\api\ApiOriginFilter.class
+com\ifi\demo\user\model\User.class
+com\ifi\demo\user\api\NotFoundException.class
+com\ifi\demo\user\api\UserApiController.class
+com\ifi\demo\user\repo\UserRepo.class
+io\swagger\RFC3339DateFormat.class
+io\swagger\configuration\SwaggerDocumentationConfig.class
+com\ifi\demo\user\api\ApiResponseMessage.class
+com\ifi\demo\user\database\FakeDb.class
