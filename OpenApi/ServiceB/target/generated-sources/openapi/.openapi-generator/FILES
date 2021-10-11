@@ -1,0 +1,5 @@
+src/main/java/api/ApiUtil.java
+src/main/java/api/UserApi.java
+src/main/java/api/UserApiController.java
+src/main/java/api/UserApiDelegate.java
+src/main/java/model/User.java

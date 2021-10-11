@@ -1,0 +1,11 @@
+invoker\ApiResponse.class
+invoker\JSON.class
+api\UserApi.class
+api\UserApi$1.class
+invoker\ApiClient.class
+invoker\RFC3339DateFormat.class
+api\UserApi$2.class
+invoker\JSON$ClassDiscriminatorMapping.class
+invoker\Pair.class
+model\User.class
+invoker\ApiException.class

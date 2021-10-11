@@ -1,0 +1,7 @@
+api\UserApi.class
+api\UserApi$1.class
+api\ApiUtil.class
+api\UserApiController$1.class
+api\UserApiController.class
+model\User.class
+api\UserApiDelegate.class

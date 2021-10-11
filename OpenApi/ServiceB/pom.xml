@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>OpenApi</artifactId>
+        <groupId>org.example</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>ServiceB</artifactId>
+
+<!--    <properties>-->
+<!--        <swagger.annotations.version>1.6.2</swagger.annotations.version>-->
+<!--        <jackson.version>2.12.4</jackson.version>-->
+<!--        <openapitools.jackson.nullable.version>0.2.1</openapitools.jackson.nullable.version>-->
+<!--        <javax.ws.rs-api.version>2.1.1</javax.ws.rs-api.version>-->
+<!--        <javax.annotation-api.version>1.3.2</javax.annotation-api.version>-->
+<!--        <findbugs.version>3.0.2</findbugs.version>-->
+<!--    </properties>-->
+
+<!--    <dependencies>-->
+
+<!--        &lt;!&ndash; ====================================================== &ndash;&gt;-->
+<!--        &lt;!&ndash; dependencies are needed for the client being generated &ndash;&gt;-->
+<!--        &lt;!&ndash; ====================================================== &ndash;&gt;-->
+
+<!--        <dependency>-->
+<!--            <groupId>org.springframework</groupId>-->
+<!--            <artifactId>spring-web</artifactId>-->
+<!--            <version>5.3.10</version>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>io.swagger</groupId>-->
+<!--            <artifactId>swagger-annotations</artifactId>-->
+<!--            <version>${swagger.annotations.version}</version>-->
+<!--        </dependency>-->
+
+<!--        &lt;!&ndash; Jackson dependencies for JSON mapping &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>com.fasterxml.jackson.core</groupId>-->
+<!--            <artifactId>jackson-core</artifactId>-->
+<!--            <version>${jackson.version}</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.fasterxml.jackson.core</groupId>-->
+<!--            <artifactId>jackson-annotations</artifactId>-->
+<!--            <version>${jackson.version}</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.fasterxml.jackson.core</groupId>-->
+<!--            <artifactId>jackson-databind</artifactId>-->
+<!--            <version>${jackson.version}</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.fasterxml.jackson.jaxrs</groupId>-->
+<!--            <artifactId>jackson-jaxrs-base</artifactId>-->
+<!--            <version>${jackson.version}</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.fasterxml.jackson.jaxrs</groupId>-->
+<!--            <artifactId>jackson-jaxrs-json-provider</artifactId>-->
+<!--            <version>${jackson.version}</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.fasterxml.jackson.datatype</groupId>-->
+<!--            <artifactId>jackson-datatype-jsr310</artifactId>-->
+<!--            <version>${jackson.version}</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.openapitools</groupId>-->
+<!--            <artifactId>jackson-databind-nullable</artifactId>-->
+<!--            <version>${openapitools.jackson.nullable.version}</version>-->
+<!--        </dependency>-->
+
+<!--        &lt;!&ndash; javax @Nullable annotation dependency not available with java 11 &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>com.google.code.findbugs</groupId>-->
+<!--            <artifactId>jsr305</artifactId>-->
+<!--            <version>${findbugs.version}</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>javax.annotation</groupId>-->
+<!--            <artifactId>javax.annotation-api</artifactId>-->
+<!--            <version>${javax.annotation-api.version}</version>-->
+<!--            <scope>provided</scope>-->
+<!--        </dependency>-->
+
+<!--        &lt;!&ndash; javax.ws.rs dependencies GenericType and ContextResolver &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>javax.ws.rs</groupId>-->
+<!--            <artifactId>javax.ws.rs-api</artifactId>-->
+<!--            <version>${javax.ws.rs-api.version}</version>-->
+<!--        </dependency>-->
+
+<!--    </dependencies>-->
+
+
+<!--    &lt;!&ndash; REST Client generation &ndash;&gt;-->
+<!--    <build>-->
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>org.openapitools</groupId>-->
+<!--                <artifactId>openapi-generator-maven-plugin</artifactId>-->
+<!--                <version>5.1.0</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <goals>-->
+<!--                            <goal>generate</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+
+<!--                            <generatorName>java</generatorName>-->
+<!--                            <library>native</library>-->
+
+
+<!--                            <inputSpec>${project.parent.basedir}/src/main/resources/swagger.yaml</inputSpec>-->
+
+<!--                            <apiPackage>api</apiPackage>-->
+<!--                            <invokerPackage>invoker</invokerPackage>-->
+<!--                            <modelPackage>model</modelPackage>-->
+
+<!--                            &lt;!&ndash; Source generation only &ndash;&gt;-->
+<!--                            <generateApiTests>false</generateApiTests>-->
+<!--                            <generateModelTests>false</generateModelTests>-->
+<!--                            <generateModelDocumentation>false</generateModelDocumentation>-->
+<!--                            <generateApiDocumentation>false</generateApiDocumentation>-->
+
+
+<!--                            <configOptions>-->
+<!--                                <dateLibrary>java8</dateLibrary>-->
+<!--                                <delegatePattern>true</delegatePattern>-->
+<!--                            </configOptions>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
+<!--        </plugins>-->
+<!--    </build>-->
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>2.5.5</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.6</version>
+        </dependency>
+        <!-- openapi -->
+        <dependency>
+            <groupId>org.openapitools</groupId>
+            <artifactId>openapi-generator</artifactId>
+            <version>${openapi-generator.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openapitools</groupId>
+            <artifactId>jackson-databind-nullable</artifactId>
+            <version>${jackson-databind.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${springfox.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.openapitools</groupId>
+                <artifactId>openapi-generator-maven-plugin</artifactId>
+                <version>${openapi-generator.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <inputSpec>
+                                ${project.parent.basedir}/src/main/resources/swagger.yaml
+                            </inputSpec>
+                            <generatorName>spring</generatorName>
+                            <apiPackage>api</apiPackage>
+                            <modelPackage>model</modelPackage>
+                            <invokerPackage>invoker</invokerPackage>
+                            <supportingFilesToGenerate>
+                                ApiUtil.java
+                            </supportingFilesToGenerate>
+                            <configOptions>
+                                <delegatePattern>true</delegatePattern>
+                            </configOptions>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <properties>
+        <openapi-generator.version>5.1.0</openapi-generator.version>
+        <spring.data.version>2.4.5</spring.data.version>
+        <jackson-databind.version>0.2.1</jackson-databind.version>
+        <springfox.version>2.9.2</springfox.version>
+    </properties>
+</project>
