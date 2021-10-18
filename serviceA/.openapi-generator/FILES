@@ -1,0 +1,6 @@
+docs/User.md
+docs/UserApi.md
+src/main/java/com/ifi/codegen/server/api/ApiClient.java
+src/main/java/com/ifi/codegen/server/api/RFC3339DateFormat.java
+src/main/java/com/ifi/codegen/server/api/UserApi.java
+src/main/java/com/ifi/codegen/server/model/User.java

@@ -15,11 +15,13 @@ public class UserApiImpl implements UserApi {
 
     @Override
     public ResponseEntity<User> getUserDetailsById(Long userId) {
+        System.out.println("get user detail service called");
         return userService.getUserDetailsById(userId);
     }
 
     @Override
     public ResponseEntity<User> saveUser(User body) {
+        System.out.println("save user service called");
         return userService.saveUser(body);
     }
 }

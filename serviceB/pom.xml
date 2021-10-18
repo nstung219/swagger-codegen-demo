@@ -17,47 +17,44 @@
 		<java.version>1.8</java.version>
 		<yaml.file>${project.basedir}/src/main/resources/swagger.yaml</yaml.file>
 		<swagger.version>1.6.3</swagger.version>
+		<openapi-generator.version>5.1.0</openapi-generator.version>
+		<spring.data.version>2.4.5</spring.data.version>
+		<jackson-databind.version>0.2.1</jackson-databind.version>
+		<springfox.version>2.9.2</springfox.version>
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
-		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
 		<dependency>
-			<groupId>io.swagger</groupId>
-			<artifactId>swagger-annotations</artifactId>
-			<version>${swagger.version}</version>
+			<groupId>org.openapitools</groupId>
+			<artifactId>jackson-databind-nullable</artifactId>
+			<version>0.2.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.openapitools</groupId>
+			<artifactId>openapi-generator</artifactId>
+			<version>${openapi-generator.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>io.swagger</groupId>
-			<artifactId>swagger-models</artifactId>
-			<version>${swagger.version}</version>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>${springfox.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>javax.validation</groupId>
-			<artifactId>validation-api</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>io.swagger.core.v3</groupId>
-			<artifactId>swagger-annotations</artifactId>
-			<version>2.1.10</version>
-		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-annotations</artifactId>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.springframework</groupId>-->
+<!--			<artifactId>spring-web</artifactId>-->
+<!--			<version>5.3.1</version>-->
+<!--		</dependency>-->
+
 	</dependencies>
 
 	<build>
@@ -67,9 +64,12 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 			<plugin>
-				<groupId>io.swagger.codegen.v3</groupId>
-				<artifactId>swagger-codegen-maven-plugin</artifactId>
-				<version>3.0.18</version>
+<!--				<groupId>io.swagger.codegen.v3</groupId>-->
+<!--				<artifactId>swagger-codegen-maven-plugin</artifactId>-->
+<!--				<version>3.0.18</version>-->
+				<groupId>org.openapitools</groupId>
+				<artifactId>openapi-generator-maven-plugin</artifactId>
+				<version>5.1.1</version>
 				<executions>
 					<execution>
 						<id>generate-server</id>
@@ -78,14 +78,17 @@
 						</goals>
 						<configuration>
 							<inputSpec>${yaml.file}</inputSpec>
-							<language>spring</language>
-							<output>${project.build.directory}/generated-sources/</output>
-							<generateSupportingFiles>false</generateSupportingFiles>
+							<library>spring-boot</library>
+							<generatorName>spring</generatorName>
 							<modelPackage>com.ifi.codegen.server.model</modelPackage>
 							<apiPackage>com.ifi.codegen.server.api</apiPackage>
+							<invokerPackage>com.ifi.codegen.server.invoker</invokerPackage>
+							<generateApiTests>false</generateApiTests>
+							<generateModelTests>false</generateModelTests>
 							<configOptions>
-								<sourceFolder>server</sourceFolder>
+								<basePackage>com.ifi.codegen.server</basePackage>
 								<interfaceOnly>true</interfaceOnly>
+								<dateLibrary>java8</dateLibrary>
 							</configOptions>
 						</configuration>
 					</execution>
